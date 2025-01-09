@@ -1,5 +1,7 @@
 using Assignment.DataAccess.Data.Repositories;
 using Assignment.DataAccess.Interfaces;
+using Assignment.Infrasctructure.Services;
+using Assignment.Infrasctructure.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IBaseRepository, BaseRepository>();
+builder.Services.AddScoped<AssignmentRepository>();
+builder.Services.AddScoped<DepartmentRepository>();
+builder.Services.AddScoped<EmployeeRepository>();
+builder.Services.AddScoped<ProjectRepository>();
+
+builder.Services.AddScoped<IBaseService, BaseService>();
+builder.Services.AddScoped<IAssignmentService, AssignmentService>();
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IProjectService, ProjectService>();
 
 var app = builder.Build();
 

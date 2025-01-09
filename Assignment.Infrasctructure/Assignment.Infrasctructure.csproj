@@ -19,4 +19,12 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Validators\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Assignment.DataAccess\Assignment.DataAccess.csproj" />
+    </ItemGroup>
+
 </Project>

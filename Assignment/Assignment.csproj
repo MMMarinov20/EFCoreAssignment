@@ -23,6 +23,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Assignment.DataAccess\Assignment.DataAccess.csproj" />
+      <ProjectReference Include="..\Assignment.DomainModel\Assignment.DomainModel.csproj" />
+      <ProjectReference Include="..\Assignment.Infrasctructure\Assignment.Infrasctructure.csproj" />
     </ItemGroup>
 
 </Project>
